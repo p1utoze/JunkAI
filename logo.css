@@ -2,7 +2,7 @@
 *:before,
 *:after {
   box-sizing: border-box;
-  font-rendering: optimizeLegibility;
+  /* font-rendering: optimizeLegibility; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

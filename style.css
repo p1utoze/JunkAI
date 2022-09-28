@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&family=Roboto&family=Ubuntu+Mono:wght@700&display=swap');
+
 :root {
     /* --p-color: #281241; */
     --p-color: #1D0937;
@@ -9,16 +11,35 @@
     margin: 0;
     padding: 0;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+	/* font-family: 'Poppins', sans-serif; */
+	/* font-family: 'Ubuntu Mono', monospace; */
+	/* font-family: 'Roboto', sans-serif; */
+	box-sizing: border-box;
+	
 
 }
-body{
-    background: url(images/bg.jpg) no-repeat fixed;
-    background-size:cover;
-    background-color: rgba(0, 0, 0, 0.3);
-    background-blend-mode:soft-light;  
+html{
+	scroll-behavior: smooth;
+	height: 100%;
 }
+
+body{
+    /* background: url(images/bg.jpg) no-repeat fixed; */
+    background-color: #1b0332fa;
+    /* background-blend-mode:soft-light;   */
+	overflow-x:hidden ;	
+	height: 100%;
+	z-index: -1;
+}
+
+body::after {
+	content: '';
+	display: flex
+	/* height: 50px; Set same as footer's height */
+  }
+
 .home{
-    background: rgba(0, 255, 234, 0.85);
+    background: rgba(32, 34, 141, 0.85);
     position:relative;
     margin: 0% 5% 50%;
     padding: 2% 0% 0%
@@ -28,12 +49,14 @@ nav {
     display:block;
     font-family: 'Times New Roman', Times, serif;
     overflow: hidden;
-    background-color: rgba(33, 99, 82, 0.8);
+    /* background-color: rgba(33, 99, 82, 0.8); */
+	background-color: rgba(132, 0, 255, 0.403);
     height: 80px;
-    position: -webkit-sticky;
+    /* position: -webkit-sticky; */
     position: sticky;
     top: 0;
-    
+    z-index: 3;
+	margin: 0 -13px 0 0;
 }
 #one{
     display: flex;
@@ -70,7 +93,7 @@ nav {
     right: 0;
     opacity: 0;
     transition: .3s ease;
-    background-color: #edffea;
+    background-color: #ff4800;
     overflow: hidden;
     border-radius: 20px;
   }
@@ -97,8 +120,43 @@ nav {
     border: none;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.0);
-    
 }
+.backgro{
+	position: absolute;
+	z-index: 0;
+}
+.backgro .img1
+  {
+    position:absolute;
+	
+    top :-100px;
+  }
+.backgro .img2
+  {
+    position: absolute;
+    top: 330px;
+    left: 950px;
+   
+  }
+.backgro .img3
+  {
+    position: absolute;
+    top: 950px;
+    left: 10px;
+  }
+.backgro .img4
+{
+    position: absolute;
+    top: 1980px;
+    left:1050px;
+}
+.backgro .img5
+{
+    position: absolute;
+    top:1600px;
+    left:1	0px;
+}
+
 .smtg {
     position: relative;
 }
@@ -107,16 +165,158 @@ nav {
     display: block;
     position: relative;
 }
+#slogan{
+	float: center;
+	height: auto;
+	margin: 0 0 5% 5%;
+	text-align: center;
+}
+.caption{
+	position: relative;
+	overflow-y: auto;
+	height:30%;
+}
+.agenda{
+	display: flex;
+	margin: 0 0 2% 3%;
+	border-bottom: 3px solid gold ;
+	width: fit-content;
+	transition: border 1s ease-in-out 2s;
+}
 
+.agenda-content{
+	display: flex;
+	margin: 0 0 -5% 45%;
+	max-width: 600px;
+	background-color: #6900cc;
+	opacity: 1;
+	padding: 25px;
+	overflow: hidden;
+	border-radius: 25px;
+	border: 1px solid black;
+	box-shadow: 2px 6px 5px 0 whitesmoke;
+}
+section{
+	position: relative;
+	height: 100%;
+	z-index: 2;
+}
+.agenda-content p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 40px;
+}
+.road-map{
+	margin: 0 0 0 3%;
+	border-bottom: 3px solid gold ;
+	width: fit-content;
+	transition: border .5s ease-in-out 1s;
+}
+
+.road-map h2, .agenda h2{
+	color: #edffea;
+	font-size: 40px;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+.cards{
+	
+	margin: 10% 5% ;
+	position: relative;
+	display: flex;
+  	flex-direction: row;
+  	align-items:stretch;
+  	overflow: hidden;
+  	width: 600px;
+  	width: 1500px
+	
+  	/* width: calc(100% - 100px); */
+}
+.cards .phase{
+	margin: 10px;
+	display: inline-block;
+	width: 900px;
+	max-width: 300px;
+	height: 450px;
+	border-radius: 25px;
+	transform: translateX(0);
+	transition: max-width 1s, height 1s, transform 0.75s;
+}
+.cards .phase h6{
+	font-size: 55px;
+	font-family: 'Ubuntu Mono', monospace;
+	font-weight: bold;
+	text-transform:uppercase;
+}
+.phase:nth-child(1){
+	background-color: #f700ff;
+	margin: 10px 0 0 0;
+	padding: 5% 5% 0 1.5%;
+	z-index: 3;
+	
+}
+.phase:nth-child(1):hover{
+	background-color: #f700ff;
+	padding: 10% 5% 0 2.5%;
+	max-width: 800px;
+	transform: translate(5%, 2.5%);
+	height: 500px;
+	z-index: 6;
+}
+.phase:nth-child(2){
+	background-color: #fd861d;
+	margin: 10px 0 0 -40px;
+	padding: 10% 5% 0 1.5%;
+	z-index: 4;
+}
+.phase:nth-child(2):hover{
+	background-color: #fd861d;
+	margin: 10px 0 0 -35px;
+	padding: 15% 5% 0 1.5%;
+	transform: translate(-3%, 2.5%);
+	max-width: 800px;
+	height: 500px;
+	z-index: 7;
+}
+.phase:nth-child(3){
+	background-color:#ff0000;
+	margin: 10px 0 0 -35px;
+	padding: 15% 5% 0 1.5%;
+	z-index: 5;
+}
+.phase:nth-child(3):hover{
+	background-color:#ff0000;
+	margin: 10px 0 0 -35px;
+	transform: translate(-3%, 2.5%);
+	max-width: 800px;
+	height: 500px;
+	z-index: 8;
+}
+
+.phase p{
+	font-size: 25px;
+	font-family: 'Poppins', sans-serif;
+	color: transparent;
+}
+.phase:hover p{
+	color: black;
+}
+footer {
+	position: relative;
+	display: flex;
+	bottom: 0;
+	z-index: 2;
+}
 
 .footer-distributed{
-	background: #362a2a;
+	background-color: rgba(132, 0, 255, 0.403);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-	padding: 55px 50px;
+	/* padding: 55px 50px; */
+
+
 }
 
 .footer-distributed .footer-left,
@@ -212,7 +412,7 @@ nav {
 }
 
 .footer-distributed .footer-links a:before {
-  content: "|";
+  content: "?";
   font-weight:300;
   font-size: 20px;
   left: 0;
@@ -268,6 +468,18 @@ nav {
 	margin-bottom: 5px;
 }
 
+.reveal {
+	position: relative;
+	opacity: 0;
+  }
+  
+  .reveal.active {
+	opacity: 1;
+  }
+  
+.active.fade-left {
+	animation: fade-left 0.8s ease-in-out;
+  }
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
@@ -294,3 +506,13 @@ nav {
 	color: white;
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+@keyframes fade-left {
+	0% {
+	  transform: translateX(-100px);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
