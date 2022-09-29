@@ -70,7 +70,7 @@ nav {
     list-style-type: none;
     height: 80px;
     float: left;
-    margin: 0 0 0 30%  ;
+    margin: 0 0 0 25%  ;
 }
 #mid li{
 	display: flex;
@@ -264,10 +264,10 @@ section{
 	width: 900px;
 	max-width: 300px;
 	height: 450px;
-	border-radius: 25px;
+	border-radius: 30px;
 	transform: translateX(0);
 	transition: max-width 1s, height 1s, transform 0.75s;
-	cursor: pointer;	
+	cursor: pointer;
 }
 .cards .phase h6{
 	font-size: 55px;
@@ -276,14 +276,16 @@ section{
 	text-transform:uppercase;
 }
 .phase:nth-child(1){
-	background-color: #f700ff;
+	/* background-color: #f700ff; */
+	background-color: #FFABE1	;
 	margin: 10px 0 0 0;
 	padding: 5% 5% 0 1.5%;
 	z-index: 3;
+	box-shadow: -5px 5px 20px 4px ;
 	
 }
 .phase:nth-child(1):hover{
-	background-color: #f700ff;
+	background-color: #FFABE1;
 	padding: 10% 5% 0 2.5%;
 	max-width: 800px;
 	transform: translate(5%, 2.5%);
@@ -291,13 +293,14 @@ section{
 	z-index: 6;
 }
 .phase:nth-child(2){
-	background-color: #fd861d;
+	background-color: #C689C6;
 	margin: 10px 0 0 -40px;
 	padding: 10% 5% 0 1.5%;
 	z-index: 4;
+	box-shadow: -5px 5px 20px 4px ;
 }
 .phase:nth-child(2):hover{
-	background-color: #fd861d;
+	background-color: #C689C6;
 	margin: 10px 0 0 -35px;
 	padding: 15% 5% 0 1.5%;
 	transform: translate(-3%, 2.5%);
@@ -306,13 +309,14 @@ section{
 	z-index: 7;
 }
 .phase:nth-child(3){
-	background-color:#ff0000;
+	background-color:#937DC2;
 	margin: 10px 0 0 -35px;
 	padding: 15% 5% 0 1.5%;
 	z-index: 5;
+	box-shadow: -5px 5px 20px 4px ;
 }
 .phase:nth-child(3):hover{
-	background-color:#ff0000;
+	background-color:#937DC2;
 	margin: 10px 0 0 -35px;
 	transform: translate(-3%, 2.5%);
 	max-width: 800px;
@@ -360,14 +364,66 @@ section{
 	font-size: 10px;
   }
 .cube{
-	position: relative;
+	position: absolute;
+	top:0;
 	right: 0;
-	margin: 0 0 0 60%;
+	display: inline-flex;
+	/* margin: 0 0 0 60%; */
+	z-index: 9	;
+	width: 600px;
+	height: 600px;
 }
 #goals .cube img{
 	transform: rotate(-90deg);
 	width: 600px;
 	height: 600px;
+}
+.stepbox {
+	position: relative;
+	margin: 4% 2%;
+	max-width: 900px;
+	height: 500px;
+}
+.steps{
+	margin: 25px 10px;
+	display: inline-block;
+	width: 900px;
+	max-width: 600px;
+	height: 70px;
+	border-radius: 30px;
+	position: relative;
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, 0.781);
+	box-shadow: 2px 2px 5px 5px rgb(24, 24, 24);
+}
+.steps h3{
+	position: relative;
+	display: block;
+	padding:  15px 0 0 5px;
+	font-family: 'Ubuntu Mono', monospace;
+	font-size: 30px;
+	font-weight: 600px;
+
+}
+.steps:nth-child(1){
+	background-color: #FFE6F7;
+	margin-left: 0%;
+}
+.steps:nth-child(2){
+	background-color: #FFABE1;
+	margin-left: 7%;
+}
+.steps:nth-child(3){
+	background-color: #C689C6;
+	margin-left: 14%;
+}
+.steps:nth-child(3) h3{
+	padding:  18px 0 0 5px;
+	font-size: 24px;
+}
+.steps:nth-child(4){
+	background-color: #937DC2;
+	margin-left: 21%;
 }
 	
 footer {
