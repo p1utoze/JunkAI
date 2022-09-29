@@ -28,15 +28,15 @@ body{
     background-color: #1b0332fa;
     /* background-blend-mode:soft-light;   */
 	overflow-x:hidden ;	
-	height: 100%;
 	z-index: -1;
+	height: 100%;
 }
-
+/* 
 body::after {
 	content: '';
 	display: flex
 	/* height: 50px; Set same as footer's height */
-  }
+ */
 
 .home{
     background: rgba(32, 34, 141, 0.85);
@@ -64,6 +64,29 @@ nav {
     height: 80px;
     float: left;
     margin: 0 5px 0;
+}
+#mid{
+	display: flex;
+    list-style-type: none;
+    height: 80px;
+    float: left;
+    margin: 0 0 0 30%  ;
+}
+#mid li{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding:10px;
+	
+}
+#mid li a{
+	text-decoration: none;
+	color: white;
+	font-family: 'Ubuntu Mono', monospace;	
+	font-size: 20px;
+}
+#mid li a:hover{
+	color: orange;
 }
 #two{
     display: flex;
@@ -124,6 +147,8 @@ nav {
 .backgro{
 	position: absolute;
 	z-index: 0;
+	height: 100%;
+
 }
 .backgro .img1
   {
@@ -168,7 +193,7 @@ nav {
 #slogan{
 	float: center;
 	height: auto;
-	margin: 0 0 5% 5%;
+	margin: 0 0 2% 5%;
 	text-align: center;
 }
 .caption{
@@ -182,31 +207,33 @@ nav {
 	border-bottom: 3px solid gold ;
 	width: fit-content;
 	transition: border 1s ease-in-out 2s;
+	text-transform: uppercase;
 }
 
 .agenda-content{
 	display: flex;
 	margin: 0 0 -5% 45%;
 	max-width: 600px;
-	background-color: #6900cc;
-	opacity: 1;
-	padding: 25px;
+	/* background-color: #6900cc; */
 	overflow: hidden;
 	border-radius: 25px;
-	border: 1px solid black;
-	box-shadow: 2px 6px 5px 0 whitesmoke;
+	/* border: 1px solid black; */
+	/* box-shadow: 2px 6px 5px 0 whitesmoke; */
 }
 section{
-	position: relative;
+	position: relative	;
 	height: 100%;
 	z-index: 2;
 }
 .agenda-content p{
 	font-family: 'Roboto', sans-serif;
-	font-size: 40px;
+	font-size: 45px;
+	font-weight: 500;
+	color: #edffea;
+	max-width: 600px;	
 }
 .road-map{
-	margin: 0 0 0 3%;
+	margin: 5% 0 0 3%;
 	border-bottom: 3px solid gold ;
 	width: fit-content;
 	transition: border .5s ease-in-out 1s;
@@ -216,7 +243,7 @@ section{
 	color: #edffea;
 	font-size: 40px;
 	font-weight: 600;
-	text-transform: capitalize;
+	text-transform: uppercase;
 }
 .cards{
 	
@@ -240,6 +267,7 @@ section{
 	border-radius: 25px;
 	transform: translateX(0);
 	transition: max-width 1s, height 1s, transform 0.75s;
+	cursor: pointer;	
 }
 .cards .phase h6{
 	font-size: 55px;
@@ -300,20 +328,63 @@ section{
 .phase:hover p{
 	color: black;
 }
-footer {
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: rgba(140, 0, 255, 0.486);
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+	background-color: rgb(140, 0, 255);
+  }
+  .material-symbols-outlined {
+	font-variation-settings:
+	'FILL' 100,
+	'wght' 400,
+	'GRAD' 50,
+	'opsz' 48;
+	font-size: 10px;
+  }
+.cube{
 	position: relative;
+	right: 0;
+	margin: 0 0 0 60%;
+}
+#goals .cube img{
+	transform: rotate(-90deg);
+	width: 600px;
+	height: 600px;
+}
+	
+footer {
 	display: flex;
 	bottom: 0;
 	z-index: 2;
 }
 
 .footer-distributed{
-	background-color: rgba(132, 0, 255, 0.403);
+	background-color: rgb(85, 0, 165);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
+	padding: 10px 10px 10px ;
+	display: flex;
 	/* padding: 55px 50px; */
 
 
@@ -323,23 +394,26 @@ footer {
 .footer-distributed .footer-center,
 .footer-distributed .footer-right{
 	display: inline-block;
-	vertical-align: top;
+	justify-content: space-between;
 }
 
 /* Footer left */
 
 .footer-distributed .footer-left{
-	width: 40%;
+	width: 33%;
+	align-items: center	;
+	border-right: 1px solid white;
 }
 
 /* The company logo */
 
-.footer-distributed h3{
-	color:  #ffffff;
-	font: normal 36px 'Open Sans', cursive;
-	margin: 0;
-}
 
+.footer-distributed .footer-left h3{
+	color: white;
+	font-family: 'Ubuntu Mono', monospace;
+	font-size: 50px;
+
+}
 .footer-distributed h3 span{
 	color:  lightseagreen;
 }
@@ -358,6 +432,7 @@ footer {
   font-weight:400;
 	text-decoration: none;
 	color:  inherit;
+	font-family: 'Poppins', sans-serif;
 }
 
 .footer-distributed .footer-company-name{
@@ -370,10 +445,21 @@ footer {
 /* Footer Center */
 
 .footer-distributed .footer-center{
-	width: 35%;
+	width: 33%;
+	font-family: 'Ubuntu Mono', monospace;
+	display: inline-block;
+	margin-left: 30px;
+	border-right: 1px solid white;
+	
+}
+.footer-center h4{
+	color: white;
+	font-family: 'Ubuntu Mono', monospace;
+	font-size: 28px;
+	font-weight: 400;
 }
 
-.footer-distributed .footer-center i{
+/* .footer-distributed .footer-center i{
 	background-color:  #33383b;
 	color: #ffffff;
 	font-size: 25px;
@@ -382,28 +468,33 @@ footer {
 	border-radius: 50%;
 	text-align: center;
 	line-height: 42px;
-	margin: 10px 15px;
+	
 	vertical-align: middle;
-}
+} */
 
-.footer-distributed .footer-center i.fa-envelope{
+/* .footer-distributed .footer-center i.fa-envelope{
 	font-size: 17px;
 	line-height: 38px;
-}
+} */
 
 .footer-distributed .footer-center p{
-	display: inline-block;
-	color: #ffffff;
-  font-weight:400;
-	vertical-align: middle;
-	margin:0;
+	display: flex;
+	color: #b8b8b8;
+  font-weight:200;
+  
+	/* vertical-align: middle; */
 }
 
-.footer-distributed .footer-center p span{
-	display:block;
+.footer-distributed .footer-center p span, .footer-right div p span{
+	display:inline-flex;
 	font-weight: normal;
 	font-size:14px;
-	line-height:2;
+	padding: 3px;
+	color: rgb(255, 255, 255);
+	margin-right:10px ;
+	background-color: black;
+	border-radius: 100%;
+
 }
 
 .footer-distributed .footer-center p a{
@@ -412,7 +503,7 @@ footer {
 }
 
 .footer-distributed .footer-links a:before {
-  content: "?";
+  content: "|";
   font-weight:300;
   font-size: 20px;
   left: 0;
@@ -429,9 +520,12 @@ footer {
 
 .footer-distributed .footer-right{
 	width: 20%;
+	color: white;
+	font-family: 'Ubuntu Mono', monospace;
+	margin-left: 30px;	
 }
 
-.footer-distributed .footer-company-about{
+.footer-distributed .footer-right .footer-company-about{
 	line-height: 20px;
 	color:  #92999f;
 	font-size: 13px;
@@ -439,33 +533,27 @@ footer {
 	margin: 0;
 }
 
-.footer-distributed .footer-company-about span{
+.footer-distributed .footer-right  h4{
 	display: block;
 	color:  #ffffff;
-	font-size: 14px;
+	font-size: 23px;
 	font-weight: bold;
-	margin-bottom: 20px;
-}
-
-.footer-distributed .footer-icons{
-	margin-top: 25px;
-}
-
-.footer-distributed .footer-icons a{
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	cursor: pointer;
-	background-color:  #33383b;
-	border-radius: 2px;
-
-	font-size: 20px;
-	color: #ffffff;
-	text-align: center;
-	line-height: 35px;
-
-	margin-right: 3px;
 	margin-bottom: 5px;
+}
+.footer-right p span{
+	display:inline-flex;
+	font-size:16px;
+	padding: 5px;
+	margin: 10px 10px 0 0;	
+	background-color: black;	
+	border-radius: 100%;
+	color: white;
+}
+.footer-right div p{
+	padding-top: -45px 0 0;
+	margin-top: -5px;
+	color: rgb(189, 189, 189);
+
 }
 
 .reveal {

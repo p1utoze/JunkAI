@@ -5,11 +5,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="logo.css">
     <link rel="stylesheet" href="logo1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />  
     <script src="script.js"></script>
+    <script src="script2.js"></script>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JunkAI</title>
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     </head>
     <body>
         <nav>
@@ -18,12 +26,23 @@
                         <img src="images/logo-removebg-preview.png"  alt="logos">
                     </button>
             </ul>
+            <ul id="mid">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#agend">Agenda</a>
+                </li>
+                <li>
+                    <a href="#road">Road-Map</a>
+                </li>
+            </ul>
             <ul id="two">
                 <div class="icons">
                     <li class="smtg">
                         <img src="images/drop-silhouette.png" alt="neural">
                         <div class="overlay">
-                            <a href="#" class="hove" title="Water">
+                            <a href="#water" class="hove" title="Water">
                                 <img src="images/drop-silhouette (1).png" alt="bruh">
                             </a>
                         </div>
@@ -31,7 +50,7 @@
                     <li class="smtg">
                         <img src="images/flash (1).png" alt="Energy">
                         <div class="overlay">
-                            <a href="#" class="hove" title="Energy">
+                            <a href="#energy" class="hove" title="Energy">
                                 <img src="images/flash.png" alt="bruh">
                             </a>
                         </div>
@@ -39,7 +58,7 @@
                     <li class="smtg">
                         <img src="images/delete (1).png" alt="Energy">
                         <div class="overlay">
-                            <a href="#" class="hove" title="Waste">
+                            <a href="#waste" class="hove" title="Waste">
                                 <img src="images/delete.png" alt="bruh">
                             </a>
                         </div>
@@ -47,7 +66,7 @@
                     <li class="smtg">
                         <img src="images/processor (1).png" alt="Energy">
                         <div class="overlay">
-                            <a href="#" class="hove" title="Neural">
+                            <a href="#neural" class="hove" title="Neural">
                                 <img src="images/processor.png" alt="bruh">
                             </a>
                         </div>
@@ -55,20 +74,24 @@
                 </div>
             </ul>
         </nav>
-        <section>
-            <!-- <h1>
-              <span class="centur">.    </span>
-              <span>JunkAi</span>
-              <span></span>
-            </h1>
-            
-            <h2>
-              <span class="centur">.    </span>
-              <span>Junkai</span>
-              <span></span>
-              
-              
-            </h2> -->
+        <div class="backgro">
+            <div class="img1">
+                    <img src="images/D1.png">
+            </div>
+            <div class="img2">
+                    <img src="images/D2.png" width="550" height="400" >
+            </div>
+            <div class="img3">
+                    <img  src="images/D3.png" width="600" height="600">
+            </div>   
+            <div class="img4">
+                    <img src="images/D4.png" width="500" height="500">
+            </div>
+            <div class="img5">
+                    <img src="images/D5.png" width="700" height="500">
+            </div>
+        </div>
+        <section id="home">
                 <div class="stage">
                     <div class="wrapper">
                     <div class="slash"></div>
@@ -90,79 +113,153 @@
                     </div>
                 </div>
         </section>
-        <div class="caption">
+        <!-- <div class="caption">
             <div class="heading">
                 <div>
                   <p class="slide-up"><span class="green">Recycle it all</span>, now matter how small </p>
                 </div>
               </div>
-        </div>
+        </div> -->
+        
+        <section id="agend">
+            <div id="slogan">
+                <div class="caption">
+                    <div class="heading ">
+                        <div>
+                          <p class="slide-up"><span class="green">THE NEW WHALE<br></span> IN THE WASTE MANAGEMENT<br>GAME </p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="agenda reveal fade-left">
+                <h2>Agenda</h2>
+            </div>
+            <div class="agenda-content">
+                <p>
+                We aim to solve one of the most deadliest problem faced by our species
+                of waste management with the help of the next generation AI which would improve
+                the state of living of all humans.
+                </p>
+            </div>
+            
+        </section>
+        <section id="road">
+            <div class="road-map reveal fade-left  ">
+                <h2>Project Roadmap</h2>
+            </div>
+            <div class="cards">
+                <div class="phase">
+                    <h6>Phase 1</h6>
+                    <br>
+                    <p>This phase involves offering solution on a small scale of house old level.</p>
+                </div>
+                <div class="phase">
+                    <h6>Phase 2</h6>
+                    <br>
+                    <p>This phase involves the involvement of municipal bodies and the data 
+                        base expands on the scale of cities.</p>
+                </div>
+                <div class="phase">
+                    <h6>Phase 3</h6>
+                    <br>
+                    <p>This phase involves setting up waste management plants which 
+                        recycles the waste and makes it reusable.</p>
+                </div>
+            </div>
+        </section>
+        <section id="goals">
+            <div class="road-map reveal fade-left ">
+                <h2>Primary Goals</h2>
+            </div>
+            <div class="cube">
+                <img src="images/cube-unscreen.gif" alt="none">
+            </div>
+
+        </section>
+        
         <footer class="footer-distributed">
 
 			<div class="footer-left">
 
-				<h3>JunkAI<span>.</span></h3>
+				<h3> <strong> JunkAI.</strong></h3>
 
 				<p class="footer-links">
-					<a href="#" class="link-1">Home</a>
 					
-					<a href="#">Blog</a>
+					<a href="#agend" class="link-1">Agenda</a>
 				
-					<a href="#">Pricing</a>
+					<a href="#road">Roadmap</a>
 				
-					<a href="#">About</a>
+					<a href="#">Water</a>
 					
-					<a href="#">Faq</a>
+					<a href="#">Energy</a>
 					
-					<a href="#">Contact</a>
+					<a href="#">Waste</a>
+
+                    <a href="#">Neural</a>
 				</p>
 
-				<p class="footer-company-name">Company Name © 2015</p>
+				<p class="footer-company-name">JunkAI © 2021</p>
 			</div>
 
 			<div class="footer-center">
-                <div class="team">
-                    <h4><u>
-                        TEAM MEMBERS:
-                    </h4></u>
-                </div>
-
+                <h4>TEAM MEMBERS:</h4>
 				<div>
-					<i class="fa fa-map-marker"></i>
-					<p><span></span>Adithya Awati</p><br>
-                    <p><span></span>Kaashif Meeraj</p>
+					<p><span class="material-symbols-outlined">
+                        person
+                        </span>Adithya Awati</p>
+                    <p><span class="material-symbols-outlined">
+                        person
+                        </span>Kaashif Meeraj</p>
+                        <p><span class="material-symbols-outlined">
+                            person                            
+                            </span>Uday Surya</p>
 				</div>
-
-				<div>
-					<i class="fa fa-phone"></i>
-					<p>+1.555.555.5555</p>
-				</div>
-
-				<div>
-					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@company.com">support@company.com</a></p>
-				</div>
-
-			</div>
+        	</div>
 
 			<div class="footer-right">
-
+                <h4>ABOUT THE COMPANY</h4>
 				<p class="footer-company-about">
-					<span>About the company</span>
-					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+					It's a college project based off Artificial Intelligence and Automation.
 				</p>
 
-				<div class="footer-icons">
-
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-github"></i></a>
-
+				<div>
+					<p><span class="material-symbols-outlined">
+                        contacts
+                        </span><u>Phone</u>: +91 99999 99999</p>
 				</div>
 
+				<div>
+					<p><span class="material-symbols-outlined">
+                        mail
+                        </span><u>Email</u>: <a href="mailto:support@company.com">support@company.com</a></p>
+				</div>
 			</div>
-
 		</footer>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined">
+            arrow_upward
+            </span></button>
+  
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+    
     </body>
 </html>
